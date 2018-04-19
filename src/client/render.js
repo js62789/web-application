@@ -1,4 +1,4 @@
-import styles from './styles/main.css';
+import styles from '../styles/main.css';
 
 export default async function renderClient() {
   const response = await fetch('/health');
