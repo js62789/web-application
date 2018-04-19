@@ -1,5 +1,5 @@
 {
-  "name": "react-application",
+  "name": "web-application",
   "version": "1.0.0",
   "description": "",
   "main": "build/index.js",
@@ -19,7 +19,7 @@
     "css-loader": "^0.28.11",
     "serve-favicon": "^2.5.0",
     "serve-static": "^1.13.2",
-    "service": "git+https://github.com/js62789/service.git",
+    "service": "git+https://github.com/js62789/web-application.git",
     "style-loader": "^0.21.0",
     "webpack": "^4.5.0",
     "webpack-dev-middleware": "^3.1.2",
