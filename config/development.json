@@ -3,7 +3,7 @@
     "mode": "development",
     "entry": {
       "client": [
-        "path:./src/client.js",
+        "config:entry",
         "webpack-hot-middleware/client"
       ]
     },

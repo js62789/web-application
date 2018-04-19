@@ -2,6 +2,7 @@
   "rootPath": "path:.",
   "distPath": "path:./dist",
   "routesDir": "sourcepath:./routes",
+  "entry": "path:./src/client.js",
   "middleware": {
     "favicon": {
       "priority": 10,
@@ -35,7 +36,7 @@
   },
   "webpack": {
     "entry": {
-      "client": "sourcepath:./client.js"
+      "client": "config:entry"
     },
     "devtool": "cheap-source-map",
     "stats": "normal",
