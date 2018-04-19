@@ -20,6 +20,19 @@
       }
     }
   },
+  "styleLoader": {
+    "loader": "style-loader"
+  },
+  "cssLoader": {
+    "loader": "css-loader",
+    "options": {
+      "modules": true,
+      "sourceMap": true,
+      "importLoaders": 1,
+      "localIdentName": "[name]__[local]___[hash:base64:5]",
+      "camelCase": true
+    }
+  },
   "webpack": {
     "entry": {
       "client": "sourcepath:./client.js"
@@ -46,6 +59,13 @@
         "js": {
           "test": "regex:\\.jsx?$",
           "loader": "babel-loader"
+        },
+        "css": {
+          "test": "regex:\\.css$",
+          "use": [
+            "config:styleLoader",
+            "config:cssLoader"
+          ]
         }
       }
     },
