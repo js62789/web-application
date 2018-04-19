@@ -1,0 +1,33 @@
+{
+  "webpack": {
+    "mode": "development",
+    "entry": {
+      "client": [
+        "path:./src/client.js",
+        "webpack-hot-middleware/client"
+      ]
+    },
+    "devtool": "inline-source-map",
+    "stats": "verbose",
+    "plugins": {
+      "hot-module-replacement": {
+        "module": {
+          "name": "webpack",
+          "method": "HotModuleReplacementPlugin"
+        }
+      },
+      "no-emit-on-errors": {
+        "module": {
+          "name": "webpack",
+          "method": "NoEmitOnErrorsPlugin"
+        }
+      },
+      "named-modules": {
+        "module": {
+          "name": "webpack",
+          "method": "NamedModulesPlugin"
+        }
+      }
+    }
+  }
+}

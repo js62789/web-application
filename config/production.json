@@ -1,0 +1,30 @@
+{
+  "webpack": {
+    "mode": "production",
+    "plugins": {
+      "clean": {
+        "module": {
+          "name": "clean-webpack-plugin",
+          "arguments": [
+            ["config:distPath"],
+            {
+              "root": "config:rootPath"
+            }
+          ]
+        }
+      },
+      "loader-options": {
+        "module": {
+          "name": "webpack",
+          "method": "LoaderOptionsPlugin",
+          "arguments": [
+            {
+              "minimize": true,
+              "debug": false
+            }
+          ]
+        }
+      }
+    }
+  }
+}
