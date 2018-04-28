@@ -1,8 +1,8 @@
 {
   "rootPath": "path:.",
   "distPath": "path:./dist",
-  "routesDir": "sourcepath:./routes",
   "entry": "path:./src/client.js",
+  "serverRenderPath": "sourcepath:./middleware/renderPage",
   "middleware": {
     "favicon": {
       "priority": 10,
@@ -18,6 +18,13 @@
         "arguments": [
           "config:distPath"
         ]
+      }
+    },
+    "render-page": {
+      "priority": 200,
+      "module": {
+        "name": "config:serverRenderPath",
+        "method": "default"
       }
     }
   },

@@ -1,5 +1,5 @@
-export default function(router) {
-  router.get('*', function renderPage(req, res, next) {
+export default function() {
+  return function renderPage(req, res, next) {
     res.send(`
       <!DOCTYPE html>
       <html>
@@ -13,5 +13,5 @@ export default function(router) {
         </body>
       </html>
   `);
-  });
+  }
 }
