@@ -41,6 +41,9 @@
       "camelCase": true
     }
   },
+  "babelLoader": {
+    "loader": "babel-loader"
+  },
   "webpack": {
     "entry": {
       "client": "config:entry"
@@ -66,7 +69,7 @@
       "rules": {
         "js": {
           "test": "regex:\\.jsx?$",
-          "loader": "babel-loader"
+          "use": "config:babelLoader"
         },
         "css": {
           "test": "regex:\\.css$",
